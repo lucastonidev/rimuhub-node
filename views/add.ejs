@@ -1,0 +1,90 @@
+<%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/css-page/add-product.css" />
+    <script type="module" src="/js/page/addInformation.js" defer></script>
+    <title>RimuHub - Adicionar Informação</title>
+    </head>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+            <main class="container" id="main">
+                <section id="adicionar" class="container">
+                    <h2 class="form-title">Adicionar Nova Informação</h2>
+                    <div class="form-container">
+                        <div id="config-status"></div>
+                        <form id="add-information-form">
+                            <div class="form-group">
+                                <label for="title-input">
+                                    <i class="fa-solid fa-heading"></i>
+                                    Título
+                                </label>
+                                <input type="text" id="title-input" placeholder="Digite o título da informação"
+                                    autocomplete="off" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image-link-input">
+                                    <i class="fa-solid fa-image"></i>
+                                    URL da Imagem
+                                </label>
+                                <span class="alert">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    Suporta link do drive <a href="./help.html">Saiba mais</a>
+                                </span>
+                                <input type="text" id="image-link-input" placeholder="Cole a URL da imagem (opcional)"
+                                    autocomplete="off" />
+
+                                <div class="image-preview-container hidde">
+                                    <span>Pré-visualização da imagem:</span>
+                                    <div class="image-preview-box">
+                                        <img id="image-preview" src="" alt="Pré-visualização da imagem" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description-input">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        Descrição Curta
+                                    </label>
+                                    <textarea id="description-input" minlength="1" maxlength="307"
+                                        placeholder="Digite uma descrição curta"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="category-select">
+                                        <i class="fa-solid fa-folder"></i>
+                                        Categoria
+                                    </label>
+
+                                    <select id="category-select">
+                                        <option value="" disabled selected>Selecione uma categoria</option>
+                                    </select>
+
+                                    <div class="category-creation-container">
+                                        <input type="text" id="category-creation" class="hidde" minlength="1"
+                                            maxlength="16" placeholder="crie uma nova categoria" />
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="link-input">
+                                        <i class="fa-solid fa-link"></i>
+                                        Link
+                                    </label>
+                                    <input id="link-input" placeholder="Cole os link relacionados à informação"
+                                        autocomplete="off"></input>
+                                </div>
+
+                                <button class="btn-submit">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                    Adicionar Informação
+                                </button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('partials/footer.ejs') %>

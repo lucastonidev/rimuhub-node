@@ -1,0 +1,32 @@
+<%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/css-page/vizualize.css" />
+    <script type="module" src="/js/page/vizualize.js" defer></script>
+    <title>RimuHub - Visualizador das suas Informações</title>
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+
+    <main class="container" id="main">
+        <div id="alert-status"></div>
+
+        <div class="main-header">
+            <h2>Minhas Informações</h2>
+            <button id="share-acervo">
+                <i class="fa-solid fa-link"></i>
+                Compartilhar
+            </button>
+        </div>
+
+        <div class="search">
+            <input type="text" id="search-info" placeholder="Buscar informações..." autocomplete="off" />
+        </div>
+
+        <div class="filters">
+            <div class="categorys" id="categorys-filters"></div>
+        </div>
+
+        <div class="grid-informations" id="cards-container"></div>
+    </main>
+
+   <%- include('partials/footer.ejs') %>

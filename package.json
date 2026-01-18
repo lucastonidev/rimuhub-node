@@ -1,0 +1,19 @@
+{
+  "name": "rimuhub",
+  "version": "0.0.1",
+  "description": "Um site onde se pode organizar uma lista colocando em categorias",
+  "license": "ISC",
+  "author": "lucasdev",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "start:dev": "node --watch src/server/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "public-google-sheets-parser": "^1.5.4"
+  }
+}

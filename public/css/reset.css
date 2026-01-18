@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a1f2e;
+  --bg-card: #252a3a;
+  --bg-header: #0a0e14;
+  --text-primary: #e6e9f0;
+  --text-secondary: #a0a6b8;
+  --accent: #ff6b9d;
+  --accent-hover: #ff4d8a;
+  --accent-secondary: #6b8cff;
+  --border: #2d3447;
+  --success: #4caf50;
+  --error: #f44336;
+  --gradient: linear-gradient(135deg, #ff6b9d, #6b8cff);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 107, 157, 0.1) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(107, 140, 255, 0.1) 0%,
+      transparent 20%
+    );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hidde {
+  display: none !important;
+}
+
+/* Estados */
+.status-message {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.status-info {
+  background-color: rgba(107, 140, 255, 0.2);
+  color: var(--accent-secondary);
+  border: 1px solid rgba(107, 140, 255, 0.3);
+}

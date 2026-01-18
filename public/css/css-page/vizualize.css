@@ -1,0 +1,248 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+#share-acervo {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#share-acervo:hover {
+  background-color: var(--accent-hover);
+}
+
+.search {
+  display: flex;
+  margin-top: 30px;
+}
+
+.search input {
+  padding: 12px 14px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: var(--accent-hover);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.categorys {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.category-btn {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-transform: capitalize;
+}
+
+.category-btn i{
+  font-size: 1rem;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.category-btn i {
+  font-size: 0.9rem;
+}
+
+.grid-informations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card-info {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--accent-secondary);
+}
+
+.card-category {
+  display: inline-block;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-image: url("../../img/default-image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-info:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.card-description {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.card-links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--accent);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.card-link:hover {
+  background-color: var(--accent-hover);
+}
+
+.card-link.secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.card-link.secondary:hover {
+  background-color: var(--border);
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .filters .categorys {
+    justify-content: center;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .info-header {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}

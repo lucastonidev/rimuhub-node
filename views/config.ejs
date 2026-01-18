@@ -1,0 +1,42 @@
+<%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/css-page/config.css" />
+    <script src="/js/page/config.js" type="module" defer></script>
+    <title>RimuHub - Configurações</title>
+    </head>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+            <main class="container">
+                <section id="configuration-page" class="section active container">
+                    <h1 class="configuration-title">Configuração do RimuHub</h1>
+
+                    <div class="config-section">
+                        <h2>Conectar Google Sheets</h2>
+                        <p>
+                            Cole a URL da sua planilha do Google Sheets para carregar os dados.
+                        </p>
+
+                        <div id="config-status"></div>
+
+                        <form id="config-form">
+                            <div class="form-group">
+                                <label for="sheets-url">URL do Google Sheets</label>
+                                <input type="url" id="sheets-url"
+                                    placeholder="https://docs.google.com/spreadsheets/d/..." />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="api-key">Chave da API SheetDB</label>
+                                <input type="text" id="api-key" placeholder="Sua chave da API SheetDB (opcional)" />
+                            </div>
+
+                            <button id="btn-carregar-dados" class="btn btn-full">
+                                <span>Carregar Dados</span>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('partials/footer.ejs') %>

@@ -1,0 +1,89 @@
+.hero {
+  padding: 60px 0;
+  text-align: center;
+  max-width: 800px;
+  height: 100dvh;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 107, 157, 0.2);
+  color: var(--accent);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.hero #form-get-data {
+  display: flex;
+  justify-content: center;
+}
+
+#form-get-data input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+#form-get-data input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+#form-get-data button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero a.help {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: var(--bg-secondary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.hero a.help:hover {
+  background-color: var(--border);
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+}

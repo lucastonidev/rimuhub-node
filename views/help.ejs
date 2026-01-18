@@ -1,0 +1,193 @@
+<%- include('partials/head.ejs') %>
+    
+    <link rel="stylesheet" href="../css/css-page/help.css" />
+    <!-- JS -->
+        <script src="/js/page/help.js" defer></script>
+    <title>RimuHub - Como Usar o Site!</title>
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+
+        <main class="container">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <h1>
+                        <i class="fa-solid fa-question"></i> 
+                        Como Usar o Site
+                    </h1>
+                    <p>Dúvidas frequentes sobre a plataforma</p>
+                </div>
+
+                <div class="faq-content">
+                    <!-- Categoria 1: Configuração Inicial -->
+                    <div class="faq-category">
+                        <div class="category-header" onclick="toggleCategory(this)">
+                            <h3>📋 Configuração Inicial</h3>
+                            <span class="category-icon">▼</span>
+                        </div>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Como conectar minha planilha do Google Sheets?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Vá na área de <strong>Configurações</strong> e cole a URL da
+                                        sua planilha pública do Google Sheets. A planilha precisa
+                                        estar configurada como pública para visualização.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Preciso de chave API? Para que serve?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        A chave API do SheetDB só é necessária se você quiser
+                                        <strong>ADICIONAR conteúdos</strong> pela plataforma. Para
+                                        apenas visualizar os dados da planilha, não é obrigatória.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Qual formato deve ter minha planilha?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Sua planilha deve ter a primeira linha como cabeçalho com os
+                                        nomes das colunas. Cada linha abaixo será tratada como um
+                                        item na visualização.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Adicionar Conteúdos -->
+                    <div class="faq-category">
+                        <div class="category-header" onclick="toggleCategory(this)">
+                            <h3>📤 Adicionar Conteúdos</h3>
+                            <span class="category-icon">▼</span>
+                        </div>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Como adicionar novos itens?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Vá na área <strong>"Adicionar Conteúdo"</strong>, preencha
+                                        todos os campos do formulário e clique em enviar. Você
+                                        precisa ter configurado uma chave API do SheetDB para isso
+                                        funcionar.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Meus dados não aparecem após adicionar, o que fazer?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Verifique se a chave API do SheetDB está correta e se a URL
+                                        da planilha está certa. Às vezes pode levar alguns segundos
+                                        para a planilha atualizar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Visualizar Conteúdos -->
+                    <div class="faq-category">
+                        <div class="category-header" onclick="toggleCategory(this)">
+                            <h3>👀 Visualizar Conteúdos</h3>
+                            <span class="category-icon">▼</span>
+                        </div>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Como visualizar meus dados?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Após configurar a URL da planilha nas Configurações, vá na
+                                        área <strong>"Visualizar Conteúdos"</strong> para ver todos
+                                        os dados da sua planilha em formato de tabela.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Os dados atualizam em tempo real?</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Sim! A cada vez que você acessa a área de visualização, os
+                                        dados mais recentes da planilha são carregados
+                                        automaticamente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 4: Problemas Comuns -->
+                    <div class="faq-category">
+                        <div class="category-header" onclick="toggleCategory(this)">
+                            <h3>🔧 Problemas Comuns</h3>
+                            <span class="category-icon">▼</span>
+                        </div>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Erro ao conectar com a planilha</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Verifique se a URL está correta e se a planilha está
+                                        pública. A URL deve ser no formato:
+                                        <code>https://docs.google.com/spreadsheets/d/SEU_ID_DA_PLANILHA/</code>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <h4>Dados não aparecem na visualização</h4>
+                                    <button class="faq-toggle">+</button>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Confirme se a planilha tem dados além do cabeçalho e se as
+                                        permissões estão como "Qualquer pessoa com o link pode
+                                        visualizar".
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-footer">
+                    <p>Não encontrou o que procurava? Entre em contato conosco!</p>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer.ejs') %>
